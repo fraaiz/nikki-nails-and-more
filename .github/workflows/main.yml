@@ -1,0 +1,99 @@
+name: Deploying to production
+
+on:
+  push:
+    branches:
+      - master
+env:
+  RELEASE_DIR: /var/www/nikki-nails-and-more/releases
+  CURRENT_RELEASE_DIR: /var/www/nikki-nails-and-more/current
+  APP_DIR: /var/www/nikki-nails-and-more
+
+jobs:
+  deplyoment:
+    name: Deployment
+    runs-on: [self-hosted]
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Displaying env variables
+      run: |
+        echo Release DIR: ${RELEASE_DIR}
+        echo Current release DIR: ${CURRENT_RELEASE_DIR}
+        echo New release DIR: ${RELEASE_DIR}/${GITHUB_SHA}
+        echo App DIR: ${APP_DIR}
+
+    - name: Moving repo
+      run: |
+        pwd
+        sudo mkdir -p -v "${RELEASE_DIR}"
+        sudo mkdir -p -v "${RELEASE_DIR}/${GITHUB_SHA}"
+        sudo mkdir -p -v "${CURRENT_RELEASE_DIR}"
+        sudo cp -rf ./* "${RELEASE_DIR}/${GITHUB_SHA}"
+
+    - name: Running composer
+      run: |
+        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+        pwd
+        sudo composer install --prefer-dist --no-scripts -o
+
+    - name: YARN Install
+      run: |
+        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+        pwd
+        sudo yarn install
+
+    - name: YARN Prod
+      run: |
+        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+        pwd
+        sudo yarn prod
+
+    - name: Enable maintenance
+      continue-on-error: true
+      run: |
+        cd "${CURRENT_RELEASE_DIR}"
+        pwd
+        sudo php artisan down
+
+    - name: Update System Links
+      run: |
+        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+        pwd
+        sudo rm -rf ./storage
+        sudo ln -nfs "${APP_DIR}/storage" ./storage
+        sudo ln -nfs "${APP_DIR}/.env" ./.env
+        sudo rm -rf "${CURRENT_RELEASE_DIR}"
+        sudo ln -nfs "${RELEASE_DIR}/${GITHUB_SHA}" "${CURRENT_RELEASE_DIR}"
+
+    - name: Deleting old releases
+      run: |
+        cd "${RELEASE_DIR}"
+        echo ${GITHUB_SHA}
+        pwd
+        find -maxdepth 1 | grep -v ${GITHUB_SHA} | grep ./ | sudo xargs rm -rf
+
+    - name: Clearing cache
+      run: |
+        cd "${CURRENT_RELEASE_DIR}"
+        pwd
+        sudo php artisan cache:clear
+        sudo php artisan config:cache
+        sudo php artisan view:cache
+        sudo redis-cli FLUSHALL
+
+    - name: Migrating
+      run: |
+        cd "${CURRENT_RELEASE_DIR}"
+        pwd
+        sudo php artisan migrate
+
+    - name: Fixing permissions
+      run: sudo chown -R www-data ${APP_DIR}
+
+    - name: Disable maintenance
+      continue-on-error: true
+      run: |
+        cd "${CURRENT_RELEASE_DIR}"
+        pwd
+        sudo php artisan up
