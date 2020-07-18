@@ -1,12 +1,18 @@
+@php
+    /** @var \App\Services\NavigationService $navigation */
+@endphp
+@inject('navigation', 'App\Services\NavigationService')
+
 <nav>
-    <ul class="flex justify-center"
-        class="text-orange-400">
-        <li class="{{ (strpos(Route::currentRouteName(), 'home') == 0) ? 'active' : '' }}">
-            <a class="active" href="{{ route('home') }}">Home</a>
-        </li>
-        <li class="{{ (strpos(Route::currentRouteName(), 'pricelist') == 0) ? 'active' : '' }}">
-            <a href="{{ route('pricelist') }}">Prijslijst</a>
-        </li>
+    <ul class="flex justify-center">
+        @php /** @var \App\Models\NavigationItem $navigationItem */ @endphp
+        @foreach($navigation->getNavigationItems() as $navigationItem)
+            <li>
+                <a class="{{ (Route::currentRouteName() === $navigationItem->route_name) ? 'active' : '' }}"
+                   href="{{ route($navigationItem->route_name) }}"
+                >{{ $navigationItem->name }}</a>
+            </li>
+        @endforeach
     </ul>
 </nav>
 
