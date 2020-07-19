@@ -12,9 +12,11 @@
 
 <body>
     <div class="container mx-auto">
-        <div class="header">
+        <div class="header pt-4">
             <div class="logo">
-                <img src="{{ asset('media/logo.png') }}" class="w-56 mx-auto"/>
+                <a class="active" href="{{ route('home') }}">
+                    <img src="{{ asset('media/logo.png') }}" class="w-56 mx-auto"/>
+                </a>
             </div>
             @include('layout.menu')
         </div>

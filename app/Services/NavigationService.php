@@ -7,7 +7,7 @@ use App\Models\NavigationItem;
 class NavigationService
 {
     /**
-     * Get all menu items
+     * Get all menu items.
      *
      * @return array
      */

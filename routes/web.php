@@ -18,5 +18,6 @@ Route::get('/', 'HomeController@view')->name('home');
 
 Route::get('/pricelist', 'PriceListController@view')->name('pricelist');
 
+Route::get('/treatments', 'TreatmentsController@view')->name('treatments');
 
 // Route::get('/contact', 'ContactController@view');
