@@ -1,10 +1,10 @@
 @extends('layout.master')
 
 @section('content')
-    <h1 class="text-center text-black uppercase text-4xl" >Behandelingen</h1>
-    <div class="grid grid-rows-3 grid-flow-col gap-4">
+{{--    <h1 class="text-center text-black uppercase text-4xl mt-8" >Behandelingen</h1>--}}
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
         <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src="{{ asset('media/Pedicure.jpg') }}" alt="Sunset in the mountains">
+            <img class="w-full" src="{{ asset('media/treatment1.jpg') }}" alt="Sunset in the mountains">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base">
@@ -19,7 +19,7 @@
         </div>
 
         <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src="{{ asset('media/Pedicure.jpg') }}" alt="Sunset in the mountains">
+            <img class="w-full" src="{{ asset('media/treatment2.jpg') }}" alt="Sunset in the mountains">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base">
