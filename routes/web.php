@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\NavigationItem;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/', 'HomeController@view')->name('home');
-
-Route::get('/pricelist', 'PriceListController@view')->name('pricelist');
-
-Route::get('/treatments', 'TreatmentsController@view')->name('treatments');
-
-// Route::get('/contact', 'ContactController@view');
+/** @var NavigationItem $navigationItem */
+foreach (NavigationItem::all() as $navigationItem)
+{
+    Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
+}

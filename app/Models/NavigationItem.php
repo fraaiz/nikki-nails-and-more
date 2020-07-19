@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string $name
  * @property string $route_name
  * @property int $position
+ * @property string $url
+ * @property string $action
  *
  * @property BelongsTo getParent
  *
