@@ -36,18 +36,18 @@ jobs:
         cd "${RELEASE_DIR}/${GITHUB_SHA}"
         pwd
         sudo composer install --prefer-dist --no-scripts -o
-
-    - name: YARN Install
-      run: |
-        cd "${RELEASE_DIR}/${GITHUB_SHA}"
-        pwd
-        sudo yarn install
-
-    - name: YARN Prod
-      run: |
-        cd "${RELEASE_DIR}/${GITHUB_SHA}"
-        pwd
-        sudo yarn prod
+#
+#    - name: YARN Install
+#      run: |
+#        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+#        pwd
+#        sudo yarn install
+#
+#    - name: YARN Prod
+#      run: |
+#        cd "${RELEASE_DIR}/${GITHUB_SHA}"
+#        pwd
+#        sudo yarn prod
 
     - name: Enable maintenance
       continue-on-error: true
