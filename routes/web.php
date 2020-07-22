@@ -2,6 +2,7 @@
 
 use App\Models\NavigationItem;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,12 @@ foreach (NavigationItem::all() as $navigationItem)
 {
     Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
 }
+
+Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin'], static function () {
+    Route::get('/', 'DashboardController@view')->name('dashboard');
+
+
+    Route::middleware('auth')->group(static function () {
+        // All routes inside this group require a signed in user!
+    });
+});
