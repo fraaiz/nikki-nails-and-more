@@ -9,7 +9,7 @@
             @include('components.treatment_card', ['treatment' => $treatment])
         @endforeach
     </div>
-    @include('components.alert', ['short_title' => 'New admin panel!', 'long_title' => 'We have a new admin panel! Check it out!', 'cta_text' => 'Open now', 'cta_url' => Route('admin::dashboard')])
+{{--    @include('components.alert', ['short_title' => 'New admin panel!', 'long_title' => 'Er is een nieuw Admin paneel, bekijk hem snel!', 'cta_text' => 'piemels', 'cta_url' => Route('admin::dashboard')])--}}
 @endsection
 
 
