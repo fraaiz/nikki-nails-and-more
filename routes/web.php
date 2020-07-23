@@ -21,14 +21,12 @@ foreach (NavigationItem::all() as $navigationItem)
     Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
 }
 
-Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin'], static function () {
-    Route::middleware('auth')->group(static function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin', 'middleware' => 'auth'], static function () {
         // All routes inside this group require a signed in user!
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::get('/treatments', 'TreatmentController@index')->name('treatments');
-    });
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
