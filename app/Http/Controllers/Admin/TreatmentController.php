@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class TreatmentController extends Controller
 {
-    public function view()
+    public function index()
     {
-        $treatments = Treatment::query()->orderBy('creation_date')->get();
-        return view('admin.dashboard', ['treatments' => $treatments]);
+        $treatments = Treatment::query()->orderBy('created_at')->get();
+        return view('admin.treatments', ['treatments' => $treatments]);
     }
 }

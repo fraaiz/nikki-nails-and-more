@@ -18,10 +18,8 @@
                     <img src="{{ asset('media/logo.png') }}" class="w-56 mx-auto"/>
                 </a>
             </div>
-            @include('layout.menu')
+            @include('layouts.menu')
         </div>
-
-
 
         @yield('content')
     </div>

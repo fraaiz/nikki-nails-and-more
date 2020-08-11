@@ -24,11 +24,11 @@
     }
 
     nav ul li a {
-        color: #f6ad55;
+        color: #000000;
     }
 
     nav ul li a.active {
-        color: #fbd38d;
+        color: #eb8794;
     }
 
 </style>
