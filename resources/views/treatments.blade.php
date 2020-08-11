@@ -12,7 +12,7 @@
  >COSMETISCHE PEDICURE TREATMENT</h1>
 
  <h1 class="text-center text-black font-italic text-sm"
- >Tijdens de cosmetische pedicure worden de nagels verzorgd incl. de nagelriemen. De nagels zullen geknipt worden en schoongemaakt worden. Daarnaast zal de nagelomgeving ook verzorgd worden.</h1>
+ >Tijdens e cosmetische pedicure worden de nagels verzorgd incl. de nagelriemen. De nagels zullen geknipt worden en schoongemaakt worden. Daarnaast zal de nagelomgeving ook verzorgd worden.</h1>
 
 <h1 class="text-center text-black font-italic text-sm uppercase mt-2"
        >DUUR VAN DE BEHANDELING: 20 MINUTEN</h1>
