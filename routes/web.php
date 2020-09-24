@@ -34,8 +34,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin', 'm
         Route::get('/treatments', 'TreatmentController@index')->name('treatments');
 });
 
-Route::get('/', function () { return view('commingsoon'); })->name('home');
-
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
