@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function view()
     {
-        return view('commingsoon');
+        return view('home');
     }
 }
-/*heb de view van home naar commingsoon veranderd*/
+
