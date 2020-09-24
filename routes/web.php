@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-/** @var NavigationItem $navigationItem */
-foreach (NavigationItem::all() as $navigationItem)
-{
-    Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
-}
+// /** @var NavigationItem $navigationItem */
+// foreach (NavigationItem::all() as $navigationItem)
+// {
+//     Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
+// }
 
 Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin', 'middleware' => 'auth'], static function () {
         // All routes inside this group require a signed in user!
