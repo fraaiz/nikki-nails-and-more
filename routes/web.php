@@ -25,7 +25,7 @@ Route::get('/', 'HomeController@view')->name('home');
 Route::get('/treatments', 'TreatmentsController@view')->name('treatments');
 Route::get('/pricelist', 'PriceListController@view')->name('pricelist');
 Route::get('/reservation', 'ReservationController@view')->name('reservation');
-Route::get('/aboutme', 'AbouteMeController@view')->name('about');
+Route::get('/aboutme', 'AboutMeController@view')->name('about');
 Route::get('/testpage', 'TestPageController@view')->name('testpage');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin', 'middleware' => 'auth'], static function () {
