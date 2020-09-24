@@ -5,9 +5,9 @@ on:
     branches:
       - master
 env:
-  RELEASE_DIR: /var/www/nikki-nails-and-more/releases
-  CURRENT_RELEASE_DIR: /var/www/nikki-nails-and-more/current
-  APP_DIR: /var/www/nikki-nails-and-more
+  RELEASE_DIR: /var/www/nikkinailsandmore/releases
+  CURRENT_RELEASE_DIR: /var/www/nikkinailsandmore/current
+  APP_DIR: /var/www/nikkinailsandmore
 
 jobs:
   deplyoment:
