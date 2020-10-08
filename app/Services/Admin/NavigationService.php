@@ -24,6 +24,12 @@ class NavigationService
                 'icon' => 'fas fa-cut',
                 'url' => Route('admin::treatments'),
             ],
+            [
+                'title' => 'form',
+                'icon' => 'fas fa-cut',
+                'url' => Route('admin::form'),
+            ],
+
         ];
     }
 }

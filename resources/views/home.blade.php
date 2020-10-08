@@ -3,25 +3,32 @@
 @inject('treatmentService', 'App\Services\TreatmentService')
 
 @section('content')
-{{--    <h1 class="text-center text-black uppercase text-4xl mt-8" >Behandelingen</h1>--}}
-<a href="/treatments">
-    <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-8 mb-lg-5 mb-20">
+{{--de Grids--}}
+<div class="grid md:grid-cols-3 sm:mx-2 sm:grid-cols-1 gap-4 mt-8  mb-12" >
 
-        <div></div>
-        <!-- ... -->
-        <div></div>
+    @foreach($treatmentService->getTreatments(3) as $treatment)
+        @include('components.treatment_card', ['treatment' => $treatment])
+    @endforeach
 
-        @foreach($treatmentService->getTreatments() as $treatment)
-            @include('components.treatment_card', ['treatment' => $treatment])
-        @endforeach
+</div>
 
-    </div>
+{{--  Vraag me niet waarom maar de href hieronder moet er 2 keer staan om het te doen, verwijder je een van de 2 word het geen link meer  --}}
+<div>
 
-</a>
+<div class="text-center">
+    <a href="/treatments" class=" ml-auto uppercase font-bold text-xl text-center">
+        bekijk hier alle behandelingen </a>
+</div>
+
+</div>
 
 
 
-  <div class="fixed right-0 bottom-0  shadow-lg bg-white w-1/5 rounded-lg  ">
+{{--  het lijntje  --}}
+<div class="mt-12" style="border-top:1px solid dimgrey"></div>
+
+
+  <div class="fixed right-0 mr-4 mb-4 bottom-0 shadow-xl bg-gray-200 w-1/5 py-2 rounded-lg " style="outline-color: #000000">
 
     <img class="h-16 w-16 rounded-full mx-auto" src="/media/fotonikki.jpeg">
     <div class="text-center">
@@ -32,7 +39,10 @@
         </div>
     </div>
 
+<style>
 
+
+</style>
 {{--<div class="ml-auto right-auto shadow-lg bg-white w-1/4 rounded-lg my-6 mt-8 ">--}}
 
 {{--    <img class="h-16 w-16 rounded-full mx-auto" src="/media/fotonikki.jpeg">--}}

@@ -76,7 +76,7 @@
     <div class="flex flex-col w-64 bg-gray-800">
         <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div class="flex items-center flex-shrink-0 px-4 font-black text-white text-4xl text-center">
-                LOGO HERE
+                Nikki Nails and More
             </div>
             <!-- Sidebar component, swap this element with another sidebar if you like -->
             <nav class="mt-5 flex-1 px-2 bg-gray-800">
