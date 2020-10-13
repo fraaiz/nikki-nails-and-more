@@ -28,6 +28,9 @@ Route::get('/reservation', 'ReservationController@view')->name('reservation');
 Route::get('/aboutme', 'AboutMeController@view')->name('about');
 Route::get('/testpage', 'TestPageController@view')->name('testpage');
 Route::get('/contact', 'ContactController@view')->name('contact');
+Route::post('/contact', 'ContactController@post')->name('contact.post');
+
+
 //Route::get('/treatments/{treatment}')
 Route::get('/treatments/pedicure', 'PedicureController@view')->name('pedicure');
 Route::get('/treatments/manicure', 'ManicureController@view')->name('manicure');

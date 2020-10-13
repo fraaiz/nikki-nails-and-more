@@ -4,83 +4,101 @@
 
 @section('content')
 
-<div class="pb-64 pt-12 text-center text-black text-lg">
-    <p>Heeft u hulp nodig of komt u er niet uit? neem gerust contact met ons op via het onderstaande formulier.<br>
-        Wij streven ernaan om zo spoedig mogelijk hierop te reageren. </p>
-</div>
-<div class="py-40"></div>
+    <div class="pb-24 pt-12 text-center text-black text-lg">
+        <p>Heeft u hulp nodig of komt u er niet uit? neem gerust contact met ons op via het onderstaande formulier.<br>
+            Wij streven ernaan om zo spoedig mogelijk hierop te reageren. </p>
+    </div>
+    <div class="py-24"></div>
 
-<div class="contact-form">
-    <h1>Contact us</h1>
-    <div class="txtb">
-        <label>Full name:</label>
-        <input type="text" name="" value="" placeholder="Enter your name">
+    <div class="contact-form">
+        <h1>Contact us</h1>
+        <form method="POST" action="{{ route('contact.post') }}">
+            @csrf
+
+            <div class="txtb ">
+                <label>Full name:</label>
+                <input type="text" name="name" value="{{ old('name') }}" placeholder="Enter your name" required>
+            </div>
+            @error('name')
+            <p>{{ $message }}</p>
+            @enderror
+
+            <div class="txtb">
+                <label>Email:</label>
+                <input type="Email" name="email" value="{{ old('email') }}" placeholder="Enter your Email" required>
+            </div>
+            @error('email')
+            <p>{{ $message }}</p>
+            @enderror
+
+            <div class="txtb @error('phone_number') bg-red-400 @enderror">
+                <label>Telefoonnummer</label>
+                <input type="tel" name="phone_number" value="{{ old('phone_number') }}" placeholder="Enter your Telefoonnummer" required>
+            </div>
+            @error('phone_number')
+                <p>{{ $message }}</p>
+            @enderror
+
+            <div class="txtb">
+                <label>Message:</label>
+                <textarea name="message" required>{{ old('message') }}</textarea>
+            </div>
+
+            <input type="submit" value="send" class="btn">
+        </form>
     </div>
 
-    <div class="txtb">
-        <label>Email:</label>
-        <input type="Email" name="" value="" placeholder="Enter your Email">
-    </div>
-
-    <div class="txtb">
-        <label>Telefoonnummer</label>
-        <input type="text" name="" value="" placeholder="Enter your Telefoonnummer">
-    </div>
-
-    <div class="txtb">
-        <label>Message:</label>
-        <textarea></textarea>
-    </div>
-    <a class="btn">send</a>
-
-</div>
 
 
-
-</body>
+    </body>
 
 
 
     <style>
-        body{
+        body {
             margin-top: -30px;
             padding: 0;
             background: url(bg.jfif);
             background-size: cover;
         }
-        .contact-form{
+
+        .contact-form {
             width: 85%;
             max-width: 600px;
             background: #f1f1f1;
-            position: absolute;
+            position: relative;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             padding: 30px 40px;
             box-sizing: border-box;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 0 20px #000000b3;
-            font-family: "Montserrat",sans-serif;
+            font-family: "Montserrat", sans-serif;
         }
-        .contact-form h1{
+
+        .contact-form h1 {
             margin-top: 0;
             font-weight: 200;
         }
-        .txtb{
-            border:1px solid gray;
+
+        .txtb {
+            border: 1px solid gray;
             margin: 8px 0;
             padding: 12px 18px;
             border-radius: 8px;
         }
-        .txtb label{
+
+        .txtb label {
             display: block;
             text-align: left;
             color: #333;
             text-transform: uppercase;
             font-size: 14px;
         }
-        .txtb input,.txtb textarea{
+
+        .txtb input, .txtb textarea {
             width: 100%;
             border: none;
             background: none;
@@ -88,7 +106,8 @@
             font-size: 18px;
             margin-top: 6px;
         }
-        .btn{
+
+        .btn {
             display: inline-block;
             background: #b6468c;
             padding: 14px 0;

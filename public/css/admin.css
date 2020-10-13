@@ -6101,3 +6101,8 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+nav i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+

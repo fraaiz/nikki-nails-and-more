@@ -50,17 +50,6 @@
                     <p>Tijd</p>
                     <input type="time">
                 </div>
-{{--                <div class="form-field">--}}
-{{--                    <p>How many people?</p>--}}
-{{--                    <select name="select" id="#">--}}
-{{--                        <option value="1">1 person</option>--}}
-{{--                        <option value="2">2 persons</option>--}}
-{{--                        <option value="3">3 persosn</option>--}}
-{{--                        <option value="4">4 persons</option>--}}
-{{--                        <option value="5">5 persons</option>--}}
-{{--                        <option value="5+">5+ persons</option>--}}
-{{--                    </select>--}}
-{{--                </div>--}}
 
                 <button class="btn">Submit</button>
             </form>
