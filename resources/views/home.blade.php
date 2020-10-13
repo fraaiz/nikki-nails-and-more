@@ -12,7 +12,7 @@
 
 </div>
 
-{{--  Vraag me niet waarom maar de href hieronder moet er 2 keer staan om het te doen, verwijder je een van de 2 word het geen link meer  --}}
+
 <div>
 
 <div class="text-center">
@@ -25,8 +25,20 @@
 
 
 {{--  het lijntje  --}}
-<div class="mt-12" style="border-top:1px solid dimgrey"></div>
+<div class="mt-12 mb-12" style="border-top:1px solid dimgrey"></div>
 
+
+
+<div  class="text-center text-pink-400">
+    <a href="/pricelist">
+    <img  class="h-32 mb-12 center" src="/media/prijslijst.jpg" href="/pricelist">
+    <a href="/pricelist" class="  uppercase font-bold text-xl text-center">
+        Bekijk hier de prijzen en aanbiedingen! </a> </a>
+
+</div>
+
+
+<div class="mt-12 mb-12" style="border-top:1px solid dimgrey"></div>
 
   <div class="fixed right-0 mr-4 mb-4 bottom-0 shadow-xl bg-gray-200 w-1/5 py-2 rounded-lg " style="outline-color: #000000">
 
@@ -40,6 +52,12 @@
     </div>
 
 <style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:
+    }
 
 
 </style>

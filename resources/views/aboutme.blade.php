@@ -9,7 +9,7 @@
 </div>
 
 
-    <img class="h-56 mb-10 rounded mx-auto" src="/media/fotonikki.jpeg">
+{{--    <img class="h-56 mb-10 rounded mx-auto" src="/media/fotonikki.jpeg">--}}
 
 
 <div
@@ -38,7 +38,7 @@
     <h1 class="mt-5">
         Er is veel mogelijk, wie niet waagt wie niet durft. </h1>
 
-    <h1 class="mt-5">
+    <h1 class="mt-5 pb-24">
         Nagels mogen stralen net als u!</h1>
 
 

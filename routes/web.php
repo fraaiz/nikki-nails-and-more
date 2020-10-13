@@ -27,12 +27,14 @@ Route::get('/pricelist', 'PriceListController@view')->name('pricelist');
 Route::get('/reservation', 'ReservationController@view')->name('reservation');
 Route::get('/aboutme', 'AboutMeController@view')->name('about');
 Route::get('/testpage', 'TestPageController@view')->name('testpage');
+Route::get('/contact', 'ContactController@view')->name('contact');
 //Route::get('/treatments/{treatment}')
 Route::get('/treatments/pedicure', 'PedicureController@view')->name('pedicure');
 Route::get('/treatments/manicure', 'ManicureController@view')->name('manicure');
 Route::get('/treatments/gelcolor', 'GelcolorController@view')->name('gelcolor');
 Route::get('/treatments/gezicht', 'GezichtController@view')->name('gezicht');
 Route::get('/treatments/lichaam', 'LichaamController@view')->name('lichaam');
+
 
 
 

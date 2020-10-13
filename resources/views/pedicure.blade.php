@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+<div>
 
         <h1 class="text-center text-black text-lg font-bold uppercase mt-16">
             PEDICURE (VOETEN)</h1>
@@ -29,7 +29,7 @@
             DUUR VAN DE BEHANDELING: 45 MINUTEN</h1>
 
 
-
+</div>
 
 
 
