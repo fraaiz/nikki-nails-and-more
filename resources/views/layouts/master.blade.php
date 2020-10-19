@@ -40,10 +40,10 @@
 
 
 <footer>
-    <nav id="footer" style="background-color: #1A1919" class="mt-32">
+    <nav id="footer" style="background-color: #333" class="mt-32">
 
-        <div style="color: #696969;">
-            <h1 class="text-center pt-8 text-black font-italic text-lg">
+        <div ">
+            <h1 class="text-center pt-8 text-white font-italic text-lg">
                 3765 ES Soest – 06-12345678<br>
                 Copyright © 2020 NikkiNailsAndMore
             </h1>
@@ -63,7 +63,7 @@
 
 
             <div class="pt-4 md:flex md:items-center md:justify-center "
-                 style="border-top:1px solid dimgrey; background-color: #1A1919">
+                 style="border-top:1px solid dimgrey; background-color: #333">
                 <ul class="">
 
 
@@ -87,7 +87,7 @@
 
 <style>
     .fa {
-        padding: 30px;
+        padding: 0px;
         font-size: 50px;
         width: 110px;
         text-align: center;
@@ -96,11 +96,13 @@
     }
 
     .fa-instagram {
+        padding: 30px;
         background: #ababab;
         color: white;
     }
 
     .fa-facebook {
+        padding: 30px;
         background: #ababab;
         color: white;
     }

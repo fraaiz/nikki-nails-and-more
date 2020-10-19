@@ -4,7 +4,7 @@
 
 @section('content')
 {{--de Grids--}}
-<div class="grid md:grid-cols-3 sm:mx-2 sm:grid-cols-1 gap-4 mt-8  mb-12" >
+<div class="grid mx-auto  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8  mb-12" >
 
     @foreach($treatmentService->getTreatments(3) as $treatment)
         @include('components.treatment_card', ['treatment' => $treatment])

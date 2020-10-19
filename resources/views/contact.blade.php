@@ -8,7 +8,7 @@
         <p>Heeft u hulp nodig of komt u er niet uit? neem gerust contact met ons op via het onderstaande formulier.<br>
             Wij streven ernaan om zo spoedig mogelijk hierop te reageren. </p>
     </div>
-    <div class="py-24"></div>
+    <div class="py-32"></div>
 
     <div class="contact-form">
         <h1>Contact us</h1>
