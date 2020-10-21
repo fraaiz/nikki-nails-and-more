@@ -20,13 +20,44 @@
     </ul>
 </nav>
 
+<br><br> <!-- dit wel weer weghalen -->
 
+{{-- Zo zou ik het gedaan hebben --}}
 
+{{-- Tablet/ Desktop menu --}}
+<nav class="flex justify-center">
+    @php /** @var \App\Models\NavigationItem $navigationItem */ @endphp
+    @foreach($navigation->getNavigationItems() as $navigationItem)
+        <a class="hidden md:block flex-none mx-2 px-2 py-1 text-base @if(Route::currentRouteName() === $navigationItem->route_name) bg-red-200 hover:text-white @else hover:text-red-200 @endif rounded"
+           href="{{ route($navigationItem->route_name) }}"
+        >
+            {{ $navigationItem->name }}
+        </a>
+    @endforeach
+    <a class="md:hidden text-base" onclick="toggleMobileMenu()">
+        MENU <i class="fa fa-bars"></i>
+    </a>
+</nav>
 
-
-
+{{-- Mobile menu --}}
+<div id="mobileMenuFrame" class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-50">
+    <p class="mt-4 text-2xl font-bold text-center">MENU</p>
+    <i class="fa fa-close fixed top-0 right-0 mt-4 mr-4 p-2" onclick="toggleMobileMenu()"></i>
+    <ul>
+        @foreach($navigation->getNavigationItems() as $navigationItem)
+            <li>
+                <a class="text-center my-2 py-2 block"
+                   href="{{ route($navigationItem->route_name) }}"
+                >
+                    {{ $navigationItem->name }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+</div>
 
 <script>
+    // Jouw code
     function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -34,6 +65,15 @@
         } else {
             x.className = "topnav";
         }
+    }
+
+    // Mijn code
+    /**
+     * Toggle the 'hidden' class on the mobile menu frame.
+     */
+    function toggleMobileMenu()
+    {
+        document.getElementById("mobileMenuFrame").classList.toggle("hidden");
     }
 </script>
 
