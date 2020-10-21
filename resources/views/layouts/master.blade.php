@@ -85,35 +85,5 @@
     </nav>
 </footer>
 
-<style>
-    .fa {
-        padding: 0px;
-        font-size: 50px;
-        width: 110px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50%;
-    }
-
-    .fa-instagram {
-        padding: 30px;
-        background: #ababab;
-        color: white;
-    }
-
-    .fa-facebook {
-        padding: 30px;
-        background: #ababab;
-        color: white;
-    }
-
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-</style>
-
 
 
