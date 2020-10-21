@@ -42,7 +42,7 @@
 <footer>
     <nav id="footer" style="background-color: #333" class="mt-32">
 
-        <div ">
+        <div>
             <h1 class="text-center pt-8 text-white font-italic text-lg">
                 3765 ES Soest – 06-12345678<br>
                 Copyright © 2020 NikkiNailsAndMore

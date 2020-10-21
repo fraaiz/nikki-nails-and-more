@@ -4,7 +4,7 @@
 @inject('navigation', 'App\Services\NavigationService')
 
 
-<nav>
+<nav class="flex justify-center ">
     <ul class="topnav " id="myTopnav">
         @php /** @var \App\Models\NavigationItem $navigationItem */ @endphp
         @foreach($navigation->getNavigationItems() as $navigationItem)
@@ -38,7 +38,9 @@
 </script>
 
 <style>
-
+    .item {
+        order: 5; /* default is 0 */
+    }
     /*nav ul li {*/
     /*    margin-right: 1rem;*/
     /*    margin-left: 1rem;*/
@@ -52,34 +54,20 @@
     /*    color: #eb8794;*/
     /*}*/
 
-    .centertest {
-        text-align-last: center;
-        border: 2px solid black;
-    }
-
-    .CenterText {
-        width:200px;
-        height:200px;
-        position: fixed;
-        background-color: blue;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -100px;
-    }
 
     .topnav {
         overflow: hidden;
-        background-color: #333;
+        /*background-color: #333;*/
         /*margin-left: 14rem;*/
         /*margin-right: 14rem;*/
 
     }
 
     .topnav a {
-        float: left;
-        display: block;
-        color: pink;
+        /*float: left;*/
+
+        /*display: block;*/
+        color: black;
         text-align: center;
         padding: 14px 14px;
         text-decoration: none;
@@ -87,8 +75,8 @@
     }
 
     .topnav a:hover {
-        color: white;
-        display: block;
+        color: lightpink;
+        /*display: block;*/
         padding-bottom: 10px;
     }
 
