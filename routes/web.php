@@ -1,8 +1,6 @@
 <?php
 
-use App\Models\NavigationItem;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,27 +13,25 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// /** @var NavigationItem $navigationItem */
-// foreach (NavigationItem::all() as $navigationItem)
-// {
-//     Route::get($navigationItem->url, $navigationItem->action)->name($navigationItem->route_name);
-// }
+/*
+ * Dashboard routes
+ */
+Route::middleware(['auth:sanctum', 'verified'])->prefix('/dashboard')->group(function () {
+    Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/', 'HomeController@view')->name('home');
-Route::get('/treatments', 'TreatmentsController@view')->name('treatments');
-Route::get('/pricelist', 'PriceListController@view')->name('pricelist');
-Route::get('/reservation', 'ReservationController@view')->name('reservation');
-Route::get('/aboutme', 'AboutMeController@view')->name('about');
-Route::get('/testpage', 'TestPageController@view')->name('testpage');
-
-Route::group(['prefix' => 'admin', 'as' => 'admin::', 'namespace' => 'Admin', 'middleware' => 'auth'], static function () {
-        // All routes inside this group require a signed in user!
-        Route::get('/', 'DashboardController@index')->name('dashboard');
-        Route::get('/treatments', 'TreatmentController@index')->name('treatments');
+    Route::as('dashboard.')->group(function () {
+        Route::get('/treatments', [\App\Http\Controllers\Dashboard\TreatmentController::class, 'index'])->name('treatments');
+    });
 });
 
-Route::get('/', function () { return view('commingsoon'); })->name('home');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
-Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+/*
+ * Website routes
+ */
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
+Route::get('/behandelingen', [\App\Http\Controllers\TreatmentController::class, 'index'])->name('treatment.index');
+Route::get('/behandelingen/{treatmentSlug}', [\App\Http\Controllers\TreatmentController::class, 'bySlug'])->name('treatment.bySlug');

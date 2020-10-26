@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function view()
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index()
     {
-        return view('home');
+        return view('welcome');
     }
 }
-
