@@ -6,6 +6,7 @@
 
         {{--    Default meta data    --}}
         <title>{{ config('app.name', 'Nikki Nails and More') }}</title>
+
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="Jesse Brouwer" />
@@ -29,34 +30,15 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
     </head>
     <body class="antialiased">
-        <div class="container relative mx-auto px-4">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+        @include('layouts.topbar')
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endif
-                </div>
-            @endif
+        {{--      Header      --}}
+        @include('layouts.header')
 
-            {{--      Header      --}}
-            <div class="flex justify-center">
-                <img class="flex-none cursor-pointer h-64" src="{{ asset('media/images/logo.png') }}" onclick="window.location.href = '{{ route('welcome') }}'" />
-            </div>
+        {{--      Content      --}}
+        @yield('content')
 
-            {{--      Navigation      --}}
-            @include('layouts.navigation')
-
-            {{--      Content      --}}
-            @yield('content')
-
-            {{--      Footer      --}}
-            @include('layouts.footer')
-        </div>
+        {{--      Footer      --}}
+        @include('layouts.footer')
     </body>
 </html>

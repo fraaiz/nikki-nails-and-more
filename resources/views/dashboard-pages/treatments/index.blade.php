@@ -4,6 +4,4 @@
             {{ __('Treatments') }}
         </h2>
     </x-slot>
-
-
 </x-dashboard-layout>
