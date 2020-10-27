@@ -1,4 +1,4 @@
-<div class="bg-pink-200 py-12 lg:py-20">
+<div class="bg-pink-200 py-10 lg:py-12 bg-opacity-50 ">
     <div class="container md:flex relative mx-auto px-4">
         <div class="hidden md:block flex-none pr-5">
             <div class="flex items-center h-full">

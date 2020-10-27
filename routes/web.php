@@ -35,3 +35,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 Route::get('/behandelingen', [\App\Http\Controllers\TreatmentController::class, 'index'])->name('treatment.index');
 Route::get('/behandelingen/{treatmentSlug}', [\App\Http\Controllers\TreatmentController::class, 'bySlug'])->name('treatment.bySlug');
+Route::get('/prijslijst', [\App\Http\Controllers\PricelistController::class, 'index'])->name('pricelist');
+Route::get('/reserveren', [\App\Http\Controllers\ReserveController::class, 'index'])->name('reserve');
+Route::get('/overmij', [\App\Http\Controllers\AboutmeController::class, 'index'])->name('aboutme');
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact');

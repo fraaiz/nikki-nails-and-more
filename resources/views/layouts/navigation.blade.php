@@ -7,16 +7,16 @@
        href="{{ route('treatment.index') }}"
     >BEHANDELINGEN</a>
     <a class="hidden md:block flex-none mx-2 px-2 py-1 text-base @if(Route::currentRouteName() === 'pricelist') bg-red-200 hover:text-white @else hover:text-red-200 @endif rounded"
-       href="{{ route('welcome') }}"
+       href="{{ route('pricelist') }}"
     >PRIJSLIJST</a>
     <a class="hidden md:block flex-none mx-2 px-2 py-1 text-base @if(Route::currentRouteName() === 'reserve') bg-red-200 hover:text-white @else hover:text-red-200 @endif rounded"
-       href="{{ route('welcome') }}"
+       href="{{ route('reserve') }}"
     >AFSPRAAK MAKEN</a>
     <a class="hidden md:block flex-none mx-2 px-2 py-1 text-base @if(Route::currentRouteName() === 'aboutme') bg-red-200 hover:text-white @else hover:text-red-200 @endif rounded"
-       href="{{ route('welcome') }}"
+       href="{{ route('aboutme') }}"
     >OVER MIJ</a>
     <a class="hidden md:block flex-none mx-2 px-2 py-1 text-base @if(Route::currentRouteName() === 'contact') bg-red-200 hover:text-white @else hover:text-red-200 @endif rounded"
-       href="{{ route('welcome') }}"
+       href="{{ route('contact') }}"
     >CONTACT</a>
 
     <a class="md:hidden text-base" onclick="toggleMobileMenu()">

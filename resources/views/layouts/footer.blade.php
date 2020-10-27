@@ -1,7 +1,4 @@
-<!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
+
 <footer class="bg-white">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -9,54 +6,54 @@
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
                         <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
-                            Solutions
+                            Behandelingen
                         </h4>
                         <ul class="mt-4 space-y-4">
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Marketing
+                                    behandeling 1
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Analytics
+                                    behandeling 2
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Commerce
+                                    behandeling 3
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Insights
+                                    behandeling 4
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
                         <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
-                            Support
+                            -
                         </h4>
                         <ul class="mt-4 space-y-4">
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Pricing
+                                    behandeling 5
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Documentation
+                                    behandeling 6
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Guides
+                                    behandeling 7
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    API Status
+                                    behandeling 8
                                 </a>
                             </li>
                         </ul>
@@ -65,73 +62,68 @@
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
                         <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
-                            Company
+                            Overige
                         </h4>
                         <ul class="mt-4 space-y-4">
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    About
+                                    Prijslijst
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Blog
+                                    Afspraak maken
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Jobs
+                                    Over mij
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Press
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Partners
+                                    Contact
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-12 md:mt-0">
-                        <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
-                            Legal
-                        </h4>
-                        <ul class="mt-4 space-y-4">
-                            <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Claim
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Privacy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                    Terms
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+{{--                    <div class="mt-12 md:mt-0">--}}
+{{--                        <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">--}}
+{{--                            Legal--}}
+{{--                        </h4>--}}
+{{--                        <ul class="mt-4 space-y-4">--}}
+{{--                            <li>--}}
+{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
+{{--                                    Claim--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
+{{--                                    Privacy--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
+{{--                                    Terms--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
                 </div>
             </div>
             <div class="mt-8 xl:mt-0">
                 <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
-                    Subscribe to our newsletter
+                    Meld je aan op de nieuwsbrief
                 </h4>
                 <p class="mt-4 text-base leading-6 text-gray-500">
-                    The latest news, articles, and resources, sent to your inbox weekly.
+                    Maak kans op 10% korting bij je eerste behandeling!
                 </p>
                 <form class="mt-4 sm:flex sm:max-w-md">
                     <label for="emailAddress" class="sr-only">Email address</label>
-                    <input type="email" id="emailAddress" required class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base leading-6 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="Enter your email">
+                    <input type="email" id="emailAddress" required class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base leading-6 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="Vul hier je email in">
                     <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                         <button type="submit" class="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                            Subscribe
+                            Aanmelden
                         </button>
                     </div>
                 </form>
