@@ -30,8 +30,23 @@
     <i class="fa fa-close fixed top-0 right-0 mt-4 mr-4 p-2" onclick="toggleMobileMenu()"></i>
     <ul>
         <li>
-            <a class="text-center my-2 py-2 block" href="{{ route('welcome') }}">
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'welcome') bg-red-200 @endif" href="{{ route('welcome') }}">
                 HOME
+            </a>
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'treatment.index') bg-red-200 @endif" href="{{ route('treatment.index') }}">
+                BEHANDELINGEN
+            </a>
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'pricelist') bg-red-200 @endif" href="{{ route('pricelist') }}">
+                PRIJSLIJST
+            </a>
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'reserve') bg-red-200 @endif" href="{{ route('reserve') }}">
+                AFSPRAAK MAKEN
+            </a>
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'aboutme') bg-red-200 @endif" href="{{ route('aboutme') }}">
+                OVER MIJ
+            </a>
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'contact') bg-red-200 @endif" href="{{ route('contact') }}">
+                CONTACT
             </a>
         </li>
     </ul>

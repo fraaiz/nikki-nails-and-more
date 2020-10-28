@@ -1,18 +1,27 @@
-<div class="my-6">
+{{--@extends('layouts.app')--}}
+
+@php
+    /** @var \App\Models\Treatment[] $treatments */
+@endphp
+
+{{--@section('content')--}}
+
+
+    <div class="my-6">
     <div class="container relative mx-auto px-4">
         <p class="text-2xl font-bold uppercase text-center text-gray-600">Behandelingen</p>
         <p class="font-lg text-gray-600 text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-{{--        <div class="grid mx-auto  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8  mb-12" >--}}
+        <div class="grid mx-auto  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8  mb-12" >
 
-{{--                    @foreach($treatmentService->getTreatments(3) as $treatment)--}}
-{{--                        @include('components.treatment_card', ['treatment' => $treatment])--}}
-{{--                    @endforeach--}}
+{{--            @foreach($treatments as $treatment)--}}
+{{--                @include('components.treatment_card', ['treatment' => $treatment])--}}
+{{--            @endforeach--}}
 
-{{--        </div>--}}
+        </div>
     </div>
 </div>
 
-
+{{--@endsection--}}
 
 
 

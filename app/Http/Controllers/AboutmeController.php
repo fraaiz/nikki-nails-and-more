@@ -11,6 +11,6 @@ class AboutmeController extends Controller
      */
     public function index()
     {
-        return view('aboutme');
+        return view('pages.aboutme.index');
     }
 }

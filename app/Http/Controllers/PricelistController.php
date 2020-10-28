@@ -11,6 +11,6 @@ class PricelistController extends Controller
      */
     public function index()
     {
-        return view('pricelist');
+        return view('pages.pricelist.index');
     }
 }

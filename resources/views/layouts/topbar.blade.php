@@ -6,7 +6,7 @@
         <a href="https://www.instagram.com/nikkinailsandmore/"><i class="fab fa-instagram-square mr-2"></i>nikkinailsandmore</a>
     </p>
     <p class="flex-none text-lg mx-3">
-        <a href="tel:+31645315733"><i class="fas fa-phone-square mr-3"></i>(06) 45 31 57 33</a>
+        <i class="fas fa-phone"> <a href="tel:+31645315733"></i>(06) 45 31 57 33</a>
     </p>
 
 {{--    @if (Route::has('login'))--}}
