@@ -33,7 +33,7 @@
             <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'welcome') bg-red-200 @endif" href="{{ route('welcome') }}">
                 HOME
             </a>
-            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'treatment.index') bg-red-200 @endif" href="{{ route('treatment.index') }}">
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'treatmenwt.index') bg-red-200 @endif" href="{{ route('treatment.index') }}">
                 BEHANDELINGEN
             </a>
             <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'pricelist') bg-red-200 @endif" href="{{ route('pricelist') }}">
