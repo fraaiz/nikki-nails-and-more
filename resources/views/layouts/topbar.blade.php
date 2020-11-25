@@ -1,4 +1,4 @@
-<div class="bg-gray-200 flex justify-end py-1 px-6 text-gray-600">
+<div class="bg-pink-100 flex justify-end py-1 px-6 text-gray-600">
     <p class="flex-none text-lg mx-3 hidden md:block">
         <a href="https://www.facebook.com/nikkinailsandmore"><i class="fab fa-facebook-square mr-2"></i>nikkinailsandmore</a>
     </p>

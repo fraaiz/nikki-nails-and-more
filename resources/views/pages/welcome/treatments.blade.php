@@ -18,9 +18,9 @@
 
                     <div class="rounded overflow-hidden shadow-lg">
                         <a href=" {{ $treatment->page_url }}">
-                            <img class="w-full " src="{{ $treatment->image }}"></a>
+                            <img class="w-full h-56 object-cover " src="{{ $treatment->image }}"></a>
                         <a href="{{ route('treatment.bySlug', $treatment->slug) }}">
-                            <div class="mx-3 font-bold text-xl mb-2">{{ $treatment->title }}</div>
+                            <div class="mx-3 md:mt-4 font-bold text-xl mb-2">{{ $treatment->title }}</div>
                             <p class="my-2 mx-3 text-gray-700 h-auto overflow-auto text-base">{{ $treatment->description }}</a></p>
                     </div>
 
