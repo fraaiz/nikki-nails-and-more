@@ -6,7 +6,7 @@
         <div class="mapouter">
             <div class="gmap_canvas rounded-xl shadow-xl mt-10">
                 <iframe width="1250" height="500" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=valeriaanstraat%20130&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=valeriaanstraat%20130%20soest&t=&z=13&ie=UTF8&iwloc=&output=embed"
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                 </iframe>
             </div>
