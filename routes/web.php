@@ -19,8 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth:sanctum', 'verified'])->prefix('/dashboard')->group(function () {
     Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard');
 
-    Route::as('dashboard.')->group(function () {
-        Route::get('/treatments', [\App\Http\Controllers\Dashboard\TreatmentController::class, 'index'])->name('treatments');
+    Route::as('dashboard.treatments.')->prefix('/treatments')->group(function () {
+        Route::get('/', \App\Http\Controllers\Dashboard\Treatments\Index::class)->name('index');
+        Route::get('/create', \App\Http\Controllers\Dashboard\Treatments\Create::class)->name('create');
+        Route::post('/create', \App\Http\Controllers\Dashboard\Treatments\Store::class)->name('store');
+        Route::get('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Edit::class)->name('edit');
+        Route::put('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Update::class)->name('update');
+        Route::get('/destroy/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Destroy::class)->name('destroy');
     });
 });
 
