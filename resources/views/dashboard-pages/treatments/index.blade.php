@@ -20,7 +20,7 @@
         </p>
         <ul>
             @foreach($treatments as $treatment)
-                <li>{{ $treatment->title }} <a href="{{ route('dashboard.treatments.edit', $treatment) }}" class="text-green-500">edit</a> <a href="{{ route('dashboard.treatments.destroy', $treatment) }}" class="text-red-500">delete</a></li>
+                <li>{{ $treatment->title }} <a href="{{ route('dashboard.treatments.edit', $treatment) }}" class="ml-10 border border-transparent text-green-500">edit</a> <a href="{{ route('dashboard.treatments.destroy', $treatment) }}" class="ml-10 border border-transparent text-red-500">delete</a></li>
             @endforeach
         </ul>
     </div>
