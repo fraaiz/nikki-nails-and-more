@@ -174,3 +174,8 @@ dist/
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/laravel,vue,vuejs,phpstorm,composer,yarn
+
+/public/fonts
+/public/css
+/public/js
+/public/webfonts
