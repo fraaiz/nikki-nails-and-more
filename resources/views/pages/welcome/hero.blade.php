@@ -1,4 +1,4 @@
-<div class=" bg-pink-200 py-10 lg:py-10 bg-opacity-50 ">
+<div class="justify-center bg-pink-200 py-10 lg:py-10 bg-opacity-50 ">
     <div class="container md:flex relative mx-auto px-4">
         <div class="hidden md:block flex-none pr-5">
             <div class="flex items-center h-full">
@@ -8,9 +8,9 @@
         </div>
         <div class="flex-auto pl-5">
             {{--    Introduction text + CTA button    --}}
-            <div>
+            <div class="hidden md:block ">
                 <p class="text-4xl font-bold capitalized">Even voorstellen</p>
-                <p class="text-lg">Hallo wat leuk dat u mijn website bezoekt!
+                <p class="text-lg py-6 ">Hallo wat leuk dat u mijn website bezoekt!
                     Ik ben Nikki de eigenaresse van NikkiNails&amp;More.
                     Ik ben gediplomeerd schoonheidsspecialiste en pedicure.
                     Ik heb altijd al een passie gehad voor de nagels. Het leukste vindt ik mijn klanten met
@@ -25,9 +25,21 @@
                     Nagels mogen stralen net als u!</p>
             </div>
 
-            <button class="mt-8 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.location.href='/reserveren'">
+            <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onclick="window.location.href='/reserveren'">
                 Afspraak maken
             </button>
         </div>
     </div>
 </div>
+
+<style>
+    .truncate {
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+
+</style>

@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="grid-item sm:px-5  gap-4 mt-8 mb-lg-5 mb-20 ">
+    <div class="grid-item gap-4 mt-8 mb-lg-5 mb-20  ">
 
         <h1 class="grid-item  text-center text-black font-italic text-2xl mt-10 ">
             Hallo wat leuk dat u mijn website bezoekt!

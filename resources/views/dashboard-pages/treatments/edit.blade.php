@@ -20,7 +20,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <div class="flex flex-col pt-4">
                 <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-{{--                    <form action="{{ route('dashboard-pages::treatments.update', [$treatment]) }}" method="POST">--}}
+                    <form action="{{ route('dashboard.treatments.update', [$treatment]) }}" method="POST">
                         @csrf
 
 

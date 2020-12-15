@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="container mx-auto grid grid-cols-4 gap-4 mt-8 mb-20">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-4 gap-4 mt-8 mb-20">
         @foreach($treatments as $treatment)
             <a href="{{ route('treatment.bySlug', $treatment->slug) }}">
                 <div class="rounded overflow-hidden shadow-lg">
