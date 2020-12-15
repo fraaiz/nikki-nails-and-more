@@ -29,6 +29,8 @@
             </div>
         </header>
 
+        @include('layouts.messages')
+
         <!-- Page Content -->
         <main>
             {{ $slot }}
