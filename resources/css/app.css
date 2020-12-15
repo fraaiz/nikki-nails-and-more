@@ -1,9 +1,0 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-@import "fontawesome/fontawesome.min.css";
-@import "fontawesome/brands.min.css";
-@import "fontawesome/regular.min.css";
-
-@import "base.css";
