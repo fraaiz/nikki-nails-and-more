@@ -85,7 +85,11 @@
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell" v-html="treatment.slug" />
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell" v-html="treatment.lastEdited" />
                                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                    <a :href="route('dashboard::treatments.edit', treatment.id)" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                    <a :href="route('dashboard::treatments.edit', treatment.id)">
+                                                        <button type="button" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                            EDIT
+                                                        </button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </tbody>

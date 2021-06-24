@@ -87,6 +87,12 @@
                                 Updated.
                             </jet-action-message>
 
+                            <a :href="route('dashboard::treatments.destroy', treatment.id)" onclick="return confirm('Are you sure?')">
+                                <jet-danger-button class="mr-2">
+                                    Delete
+                                </jet-danger-button>
+                            </a>
+
                             <jet-button :class="{ 'opacity-25': updateTreatmentForm.processing }" :disabled="updateTreatmentForm.processing">
                                 Save
                             </jet-button>
@@ -106,6 +112,7 @@
     import JetLabel from '@/Jetstream/Label'
     import JetActionMessage from '@/Jetstream/ActionMessage'
     import JetButton from '@/Jetstream/Button'
+    import JetDangerButton from '@/Jetstream/DangerButton'
     import JetCheckbox from '@/Jetstream/Checkbox'
 
     export default {
@@ -117,6 +124,7 @@
             JetLabel,
             JetActionMessage,
             JetButton,
+            JetDangerButton,
             JetCheckbox
         },
 

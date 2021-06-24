@@ -32,5 +32,8 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('/dashboard')->as('dashb
         Route::post('/create', \App\Http\Controllers\Dashboard\Treatments\Store::class)->name('store');
         Route::get('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Edit::class)->name('edit');
         Route::post('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Update::class)->name('update');
+        Route::get('/destroy/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Destroy::class)->name('destroy');
     });
 });
+
+Route::get('/{slug}', \App\Http\Controllers\ProcessSlugController::class)->name('slug');

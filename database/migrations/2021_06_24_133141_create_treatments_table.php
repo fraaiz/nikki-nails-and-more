@@ -22,6 +22,8 @@ class CreateTreatmentsTable extends Migration
             $table->string('slug')->unique();
             $table->foreignId('last_edit_by')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamps();
+
+            $table->index(['slug', 'enabled']);
         });
     }
 
