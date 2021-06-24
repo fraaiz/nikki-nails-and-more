@@ -13,7 +13,9 @@ class Index
      */
     public function __invoke(): Response
     {
-        $treatments = Treatment::all();
+        $treatments = Treatment::query()
+            ->orderByDesc('updated_at')
+            ->get();
 
         return Inertia::render('Dashboard/Treatments/Index', compact('treatments'));
     }

@@ -56,6 +56,18 @@ class Treatment extends Model
     ];
 
     /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'enabled',
+        'in_menu',
+        'title',
+        'slug',
+        'content',
+        'last_edit_by',
+    ];
+
+    /**
      * @return BelongsTo
      */
     public function lastEditedBy(): BelongsTo

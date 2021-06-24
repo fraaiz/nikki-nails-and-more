@@ -18,6 +18,8 @@ class Edit
             abort(404);
         }
 
-        return Inertia::render('Dashboard/Treatments/Index', compact('treatment'));
+        $treatment->load('lastEditedBy');
+
+        return Inertia::render('Dashboard/Treatments/Edit', compact('treatment'));
     }
 }

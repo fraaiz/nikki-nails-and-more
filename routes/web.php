@@ -29,6 +29,8 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('/dashboard')->as('dashb
     Route::prefix('/treatments')->as('treatments.')->group(static function () {
         Route::get('/', \App\Http\Controllers\Dashboard\Treatments\Index::class)->name('index');
         Route::get('/create', \App\Http\Controllers\Dashboard\Treatments\Create::class)->name('create');
-        Route::get('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Index::class)->name('edit');
+        Route::post('/create', \App\Http\Controllers\Dashboard\Treatments\Store::class)->name('store');
+        Route::get('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Edit::class)->name('edit');
+        Route::post('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Update::class)->name('update');
     });
 });
