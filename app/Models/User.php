@@ -10,6 +10,24 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * Class User
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property null|string $email_verified_at
+ * @property string $password
+ * @property null|string $two_factor_secret
+ * @property null|string $two_factor_recovery_codes
+ * @property null|string $remember_token
+ * @property null|int $current_team_id
+ * @property null|string $profile_photo_path
+ * @property string $created_at
+ * @property string $updated_at
+ *
+ * @package App\Models
+ */
 class User extends Authenticatable
 {
     use HasApiTokens;

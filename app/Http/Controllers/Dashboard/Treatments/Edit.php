@@ -3,24 +3,21 @@
 namespace App\Http\Controllers\Dashboard\Treatments;
 
 use App\Models\Treatment;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
+use Inertia\Inertia;
+use Inertia\Response;
 
-class Edit extends \App\Http\Controllers\Controller
+class Edit
 {
     /**
-     * Show the edit treatment page.
-     *
      * @param  Treatment $treatment
-     * @return Application|Factory|View
+     * @return Response
      */
-    public function __invoke(Treatment $treatment)
+    public function __invoke(Treatment $treatment): Response
     {
         if (null === $treatment) {
             abort(404);
         }
 
-        return view('dashboard-pages.treatments.edit', compact('treatment'));
+        return Inertia::render('Dashboard/Treatments/Index', compact('treatment'));
     }
 }
