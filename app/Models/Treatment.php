@@ -9,14 +9,17 @@ use Illuminate\Support\Carbon;
 /**
  * Class Treatments
  *
- * @property int id
- * @property string title
- * @property string description
- * @property string image
- * @property string slug
+ * @property int $id
+ * @property string $title
+ * @property string $description
+ * @property string $second_description
+ * @property string $intro
+ * @property string $image
+ * @property string $second_image
+ * @property string $slug
  *
- * @property Carbon created_at
- * @property Carbon updated_at
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @package App\Models
  */
@@ -42,6 +45,7 @@ class Treatment extends Model
     protected $fillable = [
         'title',
         'description',
+        'intro',
         'image',
         'slug',
     ];

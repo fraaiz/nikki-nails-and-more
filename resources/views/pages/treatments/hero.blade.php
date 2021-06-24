@@ -3,3 +3,6 @@
         <p class="text-4xl font-bold uppercase">{{ $title }}</p>
     </div>
 </div>
+
+
+

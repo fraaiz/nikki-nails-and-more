@@ -23,7 +23,7 @@
 
     <div class="container grid mx-auto md:grid-cols-2">
 
-        <div class="grid-item sm:px-5  gap-4 mt-8 mb-lg-5 mb-20 ">
+        <div class="ml-4 md:ml-0 grid-item sm:px-5  gap-4 mt-8 mb-lg-5 mb-20 ">
 
             <h1 class=" text-left text-black font-bold uppercase text-2xl mt-10 ">
                 VOETEN
@@ -83,7 +83,7 @@
             </h1>
         </div>
 
-        <div class=" grid-item w-4/5 h-56 bg-pink-200 shadow-2xl rounded-lg mt-16 ml-10">
+        <div class=" grid-item w-4/5 h:auto md:h-56 bg-pink-200 shadow-2xl rounded-lg mt-16 ml-10">
             <h1 class="text-center mt-2 uppercase font-bold text-lg">
                 Combi-deals <br>
                 MANICURE + (C) PEDICURE<br>

@@ -26,14 +26,14 @@
 
 {{-- Mobile menu --}}
 <div id="mobileMenuFrame" class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-50">
-    <p class="mt-4 text-2xl font-bold text-center">MENU</p>
+    <p class="mt-4 text-2xl font-bold text-center ">MENU</p>
     <i class="fa fa-close fixed top-0 right-0 mt-4 mr-4 p-2" onclick="toggleMobileMenu()"></i>
     <ul>
         <li>
             <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'welcome') bg-red-200 @endif" href="{{ route('welcome') }}">
                 HOME
             </a>
-            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'treatmenwt.index') bg-red-200 @endif" href="{{ route('treatment.index') }}">
+            <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'treatment.index') bg-red-200 @endif" href="{{ route('treatment.index') }}">
                 BEHANDELINGEN
             </a>
             <a class="text-center my-2 py-2 block @if(Route::currentRouteName() === 'pricelist') bg-red-200 @endif" href="{{ route('pricelist') }}">

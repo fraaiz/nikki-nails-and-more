@@ -9,11 +9,11 @@
     </x-slot>
 
     <div class="container mx-auto px-4 mt-10">
-        <ul class="mt-10 bg-white mx-auto rounded-lg py-5 pl-5 grid grid-cols-3">
+        <ul class="mt-10 bg-white mx-auto rounded-lg py-5 pl-5 grid grid-cols-1">
             @foreach($treatments as $treatment)
-                <li>{{ $treatment->title }}
-                    <a href="{{ route('dashboard.treatments.edit', $treatment) }}" class="ml-10 pl-2 pr-2  border border-transparent text-green-500">edit</a>
-                    <a href="{{ route('dashboard.treatments.destroy', $treatment) }}" class="ml-10 border border-transparent text-red-500">delete</a></li>
+                <li class="grid grid-cols-3 gap-x-5 items-center">{{ $treatment->title }}
+                    <a href="{{ route('dashboard.treatments.edit', $treatment) }}" class="border border-transparent text-green-500">Edit</a>
+                    <a href="{{ route('dashboard.treatments.destroy', $treatment) }}" class="border border-transparent text-red-500" onclick="return confirm('Weet je zeker dat je deze behandeling wilt verwijderen?');">Delete</a>
             @endforeach
         </ul>
     </div>

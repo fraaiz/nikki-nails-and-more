@@ -5,7 +5,7 @@
             <div class="grid grid-cols-2 gap-8 xl:col-span-2">
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
-                        <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
+                        <h4 class="text-sm leading-5 font-semibold text-pink-400 tracking-wider uppercase">
                             Behandelingen
                         </h4>
                         <ul class="mt-4 space-y-4">
@@ -28,8 +28,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-12 md:mt-0">
-                        <h4 class="text-sm text-transparent leading-5 font-semibold  tracking-wider uppercase">
+                    <div class="sm:mt-12 md:mt-0">
+                        <h4 class="hidden sm:block text-sm text-transparent leading-5 font-semibold  tracking-wider uppercase">
                             -
                         </h4>
                         <ul class="mt-4 space-y-4">
@@ -37,25 +37,13 @@
                                 <a href="/behandelingen/lichaam" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                                     Lichaam                                </a>
                             </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-transparent hover:text-gray-900">
-                                    tijdelijk                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-transparent hover:text-gray-900">
-                                    tijdelijk
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base leading-6 text-transparent hover:text-gray-900">
-                                    tijdelijk                                </a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
-                        <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
+                        <h4 class="text-sm leading-5 font-semibold text-pink-400 tracking-wider uppercase">
                             Overige
                         </h4>
                         <ul class="mt-4 space-y-4">
@@ -65,44 +53,22 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                <a href="/reserveren" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                                     Afspraak maken
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                <a href="/overmij" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                                     Over mij
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                <a href="/contact" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                                     Contact
                                 </a>
                             </li>
                         </ul>
                     </div>
-{{--                    <div class="mt-12 md:mt-0">--}}
-{{--                        <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">--}}
-{{--                            Legal--}}
-{{--                        </h4>--}}
-{{--                        <ul class="mt-4 space-y-4">--}}
-{{--                            <li>--}}
-{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
-{{--                                    Claim--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
-{{--                                    Privacy--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">--}}
-{{--                                    Terms--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
                 </div>
             </div>
             <div class="mt-8 xl:mt-0">
@@ -112,7 +78,7 @@
                 <p class="mt-4 text-base leading-6 text-gray-500">
                     Maak kans op 10% korting bij je eerste behandeling!
                 </p>
-                <form class="mt-4 sm:flex sm:max-w-md">
+                <form class="mt-4 sm:flex sm:max-w-md" action="https://nikkinailsandmore.us7.list-manage.com/subscribe/post?u=251ca2cb2bc1e0dc7752ae82b&amp;id=8966f17a2d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <label for="emailAddress" class="sr-only">Email address</label>
                     <input type="email" id="emailAddress" required class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base leading-6 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="Vul hier je email in">
                     <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
@@ -121,6 +87,8 @@
                         </button>
                     </div>
                 </form>
+
+
             </div>
         </div>
         <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">

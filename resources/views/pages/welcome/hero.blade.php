@@ -6,7 +6,7 @@
                 <img src="{{ asset('media/images/nikkiwerk.png') }}" class="md:w-64 rounded-full" />
             </div>
         </div>
-        <div class="flex-auto pl-5">
+        <div class="flex-auto md:pl-5">
             {{--    Introduction text + CTA button    --}}
             <div class="hidden md:block ">
                 <p class="text-4xl font-bold capitalized">Even voorstellen</p>

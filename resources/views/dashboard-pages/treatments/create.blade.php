@@ -21,11 +21,11 @@
                 @csrf
                 <div class="mt-6 w-1/2">
                     <div class="sm:col-span-3">
-                        <label for="name" class="block text-sm font-medium leading-5 text-gray-700">
-                            Name
+                        <label for="title" class="block text-sm font-medium leading-5 text-gray-700">
+                            Title
                          </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input id="name" name="name" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="Enter treatment name here..." value="{{ old('name') }}">
+                            <input id="title" name="title" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="Enter treatment name here..." value="{{ old('name') }}">
                         </div>
                     </div>
                 </div>
@@ -52,11 +52,11 @@
 
                 <div class="mt-6 w-1/2">
                     <div class="sm:col-span-3">
-                        <label for="page_url" class="block text-sm font-medium leading-5 text-gray-700">
+                        <label for="slug" class="block text-sm font-medium leading-5 text-gray-700">
                             Page URL
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input id="page_url" name="page_url" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="Enter page URL here..." value="{{ old('page_url') }}">
+                            <input id="slug" name="slug" class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="Enter page URL here..." value="{{ old('page_url') }}">
                             <p class="mt-2 text-sm text-gray-500">Example: /treatments/voeten</p>
                         </div>
                     </div>

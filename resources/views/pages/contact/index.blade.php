@@ -35,7 +35,7 @@
                     Contact formulier
                 </h2>
                 <p class="mt-4 text-lg leading-6 text-gray-500">
-                    Vul het onderstaande formulier en wij nemen zo spoedig mogelijk contact met u op! Wij strefen ernaar om binnen 1-2 werkdagen te reageren.
+                    Vul het onderstaande formulier in en wij nemen zo spoedig mogelijk contact met u op! Wij strefen ernaar om binnen 1-2 werkdagen te reageren.
                 </p>
             </div>
             <div class="mt-12">

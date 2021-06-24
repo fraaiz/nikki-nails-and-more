@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('/dashboard')->group(fun
         Route::get('/create', \App\Http\Controllers\Dashboard\Treatments\Create::class)->name('create');
         Route::post('/create', \App\Http\Controllers\Dashboard\Treatments\Store::class)->name('store');
         Route::get('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Edit::class)->name('edit');
-        Route::put('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Update::class)->name('update');
+        Route::post('/edit/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Update::class)->name('update');
         Route::get('/destroy/{treatment}', \App\Http\Controllers\Dashboard\Treatments\Destroy::class)->name('destroy');
     });
 });
