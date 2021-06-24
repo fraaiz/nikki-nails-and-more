@@ -179,3 +179,5 @@ dist/
 /public/css
 /public/js
 /public/webfonts
+
+.idea/
